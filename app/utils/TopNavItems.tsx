@@ -36,7 +36,7 @@ const TopNavItems: React.FC<Props> = ({ activeItem, isMobile }) => {
               </span>
             </Link>
           ))}
-           {/* <ThemeSwitcher /> */}
+           <ThemeSwitcher />
       </div>
     </>
   );
