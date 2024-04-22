@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --backgrouond-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --backgrouond-end-rgb: 0, 0, 0;
+    }
+}
+
+body{
+    color: rgb(var(--foreground-rgb));
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #CBD5E1 #E2E8F0;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #E2E8F0;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #E2E8F0;
+    border-radius: 20px;
+    border: 3px solid #CBD5E1;
+  }
+
+
+.title{
+    @apply text-[25px] text-black dark:text-white font-[500] font-Poppins text-center py-2
+}
+.label{
+    @apply text-[16px] font-Poppins text-slate-500 dark:text-white
+}
+.input{
+    @apply w-full text-black dark:text-white bg-slate-100 border rounded h-[40px] px-2 outline-none mt-[10px] font-Poppins
+}
+.button{
+    @apply flex flex-row justify-center items-center py-3 text-white cursor-pointer gradient-bg rounded-sm min-h-[45px] w-full text-[16px] font-Poppins font-semibold
+}
+.ps-menu-button{
+    @apply hover:!bg-[#00000015] dark:hover:!bg-[#ffffff13] !font-[500]
+}
+.ps-submenu-expand-icon span{
+    @apply h-2 w-2
+}
+.ps-sidebar-root{
+    @apply !border-r-2 !border-[#ffffff11]
+}
+.avatar-tiny span{
+    @apply !h-6 !w-6
+}
+.MuiBottomNavigationAction-root{
+    @apply dark:text-white
+}
+
+/* Modal Styling  */
+.MuiModalDialog-root{
+    @apply dark:bg-slate-900 dark:border-slate-800
+}
+.MuiDialogTitle-root{
+    @apply dark:text-white
+}
+.MuiModalClose-root{
+    @apply dark:hover:bg-slate-700 dark:hover:text-white
+}
+
+.gradient-bg{
+    @apply bg-gradient-to-r from-orange-600 to-orange-400
+}
+.head-bg div table thead tr{
+    @apply !bg-gradient-to-r !from-orange-600 !to-orange-400
+}
+.custom-table div{
+    @apply !p-1 !shadow-none
+}
+
+.selector-white div button{
+    @apply !bg-white !rounded-none !py-0 !h-auto !min-h-unit-10
+}
+
+.date-picker-style div div input{
+    @apply !px-2 !py-0 !min-h-unit-9 !outline-none !border-0 
+}
+.date-picker-style div div fieldset{
+    @apply !border-none 
+}
+.date-picker-style div div{
+    @apply !p-0 !border-0 !rounded-none !w-full 
+}
+.date-picker-style div{
+    @apply !p-0
+}
+.date-picker-style{
+    @apply !p-0 !bg-white !min-h-unit-10 !border-1
+}
+.width-style div{
+   /* @apply !max-w-[4rem] */
+}
+.MuiStack-root{
+    @apply !p-0
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+
+.swiper-wrapper{
+    padding-top: 10px;
+    padding-bottom: 35px;
+  }
+  .swiper-pagination {
+    margin-top: 120px; /* Adjust as needed */
+  }
+  .swiper-pagination-bullet {
+    background: #333 !important;
+    width: 10px;
+    height: 10px;
+    opacity: 0.5;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .dark .swiper-pagination-bullet{
+    background: #fff !important;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+  
