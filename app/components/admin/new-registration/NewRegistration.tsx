@@ -9,7 +9,6 @@ type Props = {};
 const NewRegistration = (props: Props) => {
   const { isLoading } = useAllUsersQuery({});
   const { allUsers } = useSelector((state: any) => state.admin);
-  console.log(allUsers);
   return (
     <div className="mx-2">
       <h2 className="font-semibold text-lg text-slate-800 my-3 ">
